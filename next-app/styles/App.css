@@ -1,0 +1,497 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Open Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  color: #21243d;
+  font-family: Hind, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Header */
+.header {
+  align-items: center;
+  background: #ffffff;
+  position: relative;
+  /* background-image: url('./assets/cover.png');
+  background-image: url('./assets/cover.png'),
+    linear-gradient(to bottom, #fbc300, #c98a00); */
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: 40px;
+  padding: 0.5rem 1rem;
+  margin: 0px auto;
+  max-width: 1300px;
+  text-align: center;
+  position: relative;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 30px 0px;
+}
+.breadcrumb-data {
+  color: #111820;
+}
+.breadcrumb-crumb {
+  margin: 0px 8px;
+}
+.header-logo {
+  margin: 0;
+}
+
+.header-logo svg {
+  height: 24px;
+  width: 92px;
+}
+
+.header-title {
+  font-size: 38px;
+  font-weight: 300;
+}
+
+/* Containers */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0rem 1rem;
+}
+.main-content {
+  display: flex;
+}
+.connect-button {
+  background-color: royalblue;
+  color: #ffffff;
+  padding: 20px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.container-filters {
+  flex: 1;
+  margin-right: 60px;
+  max-width: 260px;
+}
+
+.container-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 40px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.container-results {
+  flex: 3;
+}
+
+.container-options {
+  border-bottom: 1px solid #ebecf3;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  padding: 30px 0;
+}
+
+.container-options .container-option:not(:first-child) {
+  margin-left: 48px;
+}
+
+.container-options select {
+  min-width: 100px;
+}
+
+.container-footer {
+  margin: 4rem 0;
+}
+
+/* Styles the SFFV highlightings */
+
+em {
+  font-style: normal;
+}
+
+em,
+mark {
+  background: rgba(226, 164, 0, 0.4);
+}
+
+/* Clear refinements container */
+
+.clear-filters {
+  align-items: center;
+  display: flex;
+}
+
+.clear-filters svg {
+  margin-right: 8px;
+}
+
+/* Panel */
+
+.container-body .ebayclone-Panel {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.ebayclone-Panel-header {
+  font-family: Hind, sans-serif;
+}
+
+/* Search box */
+
+.header {
+  display: flex;
+  gap: 2rem;
+}
+
+.header .ebayclone-SearchBox {
+  width: 740px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header .ebayclone-SearchBox .ebayclone-SearchBox-input {
+  background-color: #fff;
+  border: 2px solid #41413f;
+
+  font-family: Hind, sans-serif;
+  height: 46px;
+  /*
+    The "Hind" font family is vertically off-balance.
+    Adding 4px of padding top makes it more vertically aligned.
+  */
+  padding: 4px 48px 0 64px;
+}
+
+.header .ebayclone-SearchBox-submit {
+  margin-left: 4px;
+  width: 50px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.header .ebayclone-SearchBox .ebayclone-SearchBox-input::placeholder {
+  color: rgba(33, 36, 61, 0.24);
+  opacity: 1; /* Firefox */
+}
+
+.ebayclone-SearchBox-input:-ms-input-placeholder {
+  color: rgba(33, 36, 61, 0.24);
+}
+
+.ebayclone-SearchBox-input::-ms-input-placeholder {
+  color: rgba(33, 36, 61, 0.24);
+}
+
+.ebayclone-SearchBox-submit {
+  color: gray;
+}
+
+.ebayclone-RefinementList .ebayclone-SearchBox-input {
+  font-family: Hind, sans-serif;
+  /*
+    The "Hind" font family is vertically off-balance.
+    Adding some padding top makes it more vertically aligned.
+  */
+  padding-top: 2px;
+}
+
+/* Hits */
+
+.hit {
+  color: #21243d;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.hit h1 {
+  font-size: 14px;
+}
+
+.hit-category {
+  color: #21243d;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 8px;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.hit-description {
+  margin-top: 2px;
+}
+
+.hit-info-container {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.hit-image-container {
+  align-items: center;
+  display: flex;
+  height: 174px;
+  justify-content: center;
+  margin: auto;
+  width: 174px;
+}
+
+.hit-image {
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.hit-em {
+  color: #000000;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.hit-rating {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  margin-left: 4px;
+  padding: 0 4px;
+}
+.drop-down-button {
+  border: none;
+  padding: 5px;
+  color: #2b2929;
+  font-weight: 300;
+  font-size: 18px;
+  max-width: 90px;
+  background-color: #fff;
+  display: flex;
+  text-align: left;
+}
+.mega-menu {
+  position: absolute;
+  display: grid;
+  grid-template-rows: repeat(3, 150px);
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid gray;
+  background-color: #fff;
+  top: 70px;
+  left: 130px;
+  z-index: 800;
+  padding: 10px;
+}
+.dropdownItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+}
+.dropdownItemTitle {
+  color: #000000;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 5px 0px;
+}
+.dropdownItemDescription {
+  color: #555;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 2px 0px;
+  letter-spacing: 0.5px;
+}
+.allCategories {
+  width: 300%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 5px;
+  border-top: 1px solid gray;
+  color: #0654ba;
+  font-weight: 500;
+  font-size: 18px;
+}
+.checked {
+  background-color: #000000;
+}
+.allDropDown {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  border: none;
+  background-color: white;
+  height: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid gray;
+  padding-left: 10px;
+}
+.sell-container {
+  background-color: rgb(255, 255, 255);
+  padding: 30px;
+  margin: 30px;
+  border: 1px solid rgb(90, 89, 89);
+  border-radius: 4px;
+  min-width: 450px;
+}
+.sell-input-container {
+  display: flex;
+  flex-direction: column;
+  padding: 7px 0px;
+}
+.sell-input-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 2px 0px;
+}
+.sell-input-textbox {
+  font-size: 15px;
+  font-weight: 400;
+  border: 0.5px solid gray;
+  padding: 10px 10px;
+  border-radius: 4px;
+}
+.sell-input-button {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 4px;
+}
+.dropdownOption {
+  border: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hits-empty-state {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 300px;
+}
+
+.hits-empty-state-title {
+  font-family: Hind;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.hits-empty-state-description {
+  color: rgba(35, 37, 51, 0.6);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.hits-empty-state .ebayclone-ClearRefinements {
+  margin-top: 1rem;
+}
+
+.hits-empty-state .ebayclone-ClearRefinements-button--disabled {
+  display: none;
+}
+
+.hits-empty-state .ebayclone-ClearRefinements-button {
+  background: rgba(10, 8, 41, 0.04);
+  border-radius: 3px;
+  color: #21243d;
+  min-height: 48px;
+  padding: 16px 24px;
+}
+
+/* ToggleRefinement */
+
+.ebayclone-ToggleRefinement-label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.ebayclone-ToggleRefinement-checkbox {
+  font: inherit;
+  margin-left: 1rem;
+  margin-right: 0;
+  position: relative;
+}
+.round {
+  border-radius: 10px;
+}
+.ebayclone-ToggleRefinement-checkbox:checked::before {
+  color: #050505;
+}
+
+.ebayclone-ToggleRefinement-checkbox::before {
+  align-items: center;
+  color: rgba(33, 36, 61, 0.32);
+  content: 'No';
+  display: flex;
+  font-size: 0.8rem;
+  height: 16px;
+  position: absolute;
+  right: 38px;
+}
+
+.ebayclone-ToggleRefinement-checkbox:checked::before {
+  content: 'Yes';
+}
+
+.ebayclone-ToggleRefinement-count {
+  display: none;
+}
+
+/* RatingMenu */
+
+.ebayclone-RatingMenu-item:not(.ebayclone-RatingMenu-item--selected) {
+  opacity: 0.5;
+}
+
+.ebayclone-RatingMenu-starIcon {
+  margin-right: 0.5rem;
+}
+
+/* Hide all mobile-specific design on desktop */
+
+@media (min-width: 900px) {
+  [data-layout='mobile'] {
+    display: none;
+  }
+}
+
+.ebayLogo-container {
+  position: relative;
+  width: 11rem;
+  height: 3.5rem;
+}
