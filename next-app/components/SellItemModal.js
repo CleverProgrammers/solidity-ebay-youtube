@@ -1,11 +1,4 @@
 import { useState } from 'react'
-import { Uploader } from 'uploader'
-import { useAppContext } from '../context/context'
-import toast from 'react-hot-toast'
-
-const uploader = new Uploader({
-  apiKey: 'free',
-})
 
 const SellItem = () => {
   const [name, setName] = useState('')
@@ -13,39 +6,10 @@ const SellItem = () => {
   const [category, setCategory] = useState('')
   const [price, setPrice] = useState('')
   const [rating, setRating] = useState('')
-  const [imgUrl, setImgUrl] = useState('')
 
-  const { sellItem } = useAppContext()
+  const handleUploadProductImage = async () => {}
 
-  const handleUploadProductImage = async () => {
-    uploader
-      .open({ multi: false })
-      .then(files => {
-        if (files.length === 0) {
-          alert('No files selected.')
-        } else {
-          setImgUrl(files[0].fileUrl)
-        }
-      })
-      .catch(err => {
-        console.error(err)
-      })
-  }
-
-  const handleSubmit = async event => {
-    event.preventDefault()
-    if (!name || !description || !category || !price || !rating || !imgUrl)
-      return
-
-    toast.promise(
-      sellItem(name, description, category, imgUrl, price, rating),
-      {
-        loading: 'Listing Item... This can take a few seconds. ⏳',
-        success: 'Item listed! 🎉',
-        error: 'Error listing item. 😢',
-      },
-    )
-  }
+  const handleSubmit = async event => {}
 
   return (
     <div className='sell-container'>

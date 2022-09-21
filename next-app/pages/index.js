@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useAppContext } from '../context/context'
-import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { Toaster } from 'react-hot-toast'
 import Modal from 'react-modal'
 import Product from '../components/Product'
@@ -16,8 +14,7 @@ Modal.setAppElement('#__next')
 
 const App = () => {
   const router = useRouter()
-
-  const { products } = useAppContext()
+  const products = []
 
   return (
     <>
@@ -29,7 +26,6 @@ const App = () => {
         <EbayLogo />
         <button className='drop-down-button'>Shop by category ›</button>
         <Searchbar />
-        <ConnectButton />
 
         <Link href='/?sell=1'>
           <button className='connect-button'>Create</button>

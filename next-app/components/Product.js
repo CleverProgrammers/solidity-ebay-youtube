@@ -1,9 +1,8 @@
-import { useAppContext } from '../context/context'
 import { formatNumber } from '../utils'
 import toast from 'react-hot-toast'
 
 const Product = ({ product }) => {
-  const { buyProduct } = useAppContext()
+  const buyProduct = async id => {}
 
   return (
     <article

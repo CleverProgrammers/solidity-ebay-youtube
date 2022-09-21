@@ -1,15 +1,4 @@
-import ContractABI from './Ebay.json'
-import Web3 from 'web3'
-
-export const address = '0xYourDeployedAddress'
-
-export const createContract = () => {
-  const { ethereum } = window
-  if (ethereum) {
-    const web3 = new Web3(ethereum)
-    return new web3.eth.Contract(ContractABI.abi, address)
-  }
-}
+export const createContract = () => {}
 
 export const modalStyles = {
   content: {
